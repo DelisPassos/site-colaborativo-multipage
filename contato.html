@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Contato - Sebo Página Virada</title>
+  <!-- Font Awesome para os ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,22 +19,33 @@
   </header>
 
   <main>
-    <h2>Informações de Contato</h2>
-    <p>[Ediana] Colocar email, WhatsApp etc.</p>
+    <section class="contato">
+      <h2>Entre em Contato</h2>
+      <p>Estamos à disposição para responder dúvidas, sugestões ou pedidos.</p>
+      <ul>
+        <li><i class="fas fa-envelope"></i> contato@paginavirada.com</li>
+        <li><i class="fab fa-whatsapp"></i> (11) 91234-5678</li>
+        <li><i class="fas fa-map-marker-alt"></i> Rua das Letras, 123 - São Paulo, SP</li>
+      </ul>
+    </section>
 
     <h3>Envie uma mensagem:</h3>
     <form>
-      <!-- [Délis] Formulário -->
-      <input type="text" placeholder="Nome">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Escreva sua mensagem aqui"></textarea>
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Escreva sua mensagem aqui" required></textarea>
       <button type="submit">Enviar</button>
     </form>
+
+    
 
     <h3>Onde estamos:</h3>
     <div>
       [Roberta] Incluir mapa ou imagem fictícia
     </div>
   </main>
+  <footer>
+    <p>&copy; 2025 Sebo Página Virada. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
