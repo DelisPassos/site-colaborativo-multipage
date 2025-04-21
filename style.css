@@ -55,3 +55,25 @@ body {
     background-color: #8b5e3c;
   }
   
+  .botao-container {
+    margin: 10px 0;
+  }
+  
+  .botao-container button {
+    background-color: #a67c52;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-container button:hover {
+    background-color: #8b5e3c;
+  }
+
+  
+  
