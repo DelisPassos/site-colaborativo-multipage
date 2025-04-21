@@ -16,14 +16,91 @@
   </header>
 
   <main>
+    <!-- Aqui começa a seção de linha do tempo -->
     <h2>Nossa História</h2>
-    <p>[Délis] Linha do tempo com a história do sebo.</p>
-
-    <h2>Missão e Valores</h2>
-    <p>[Ediana] Texto institucional aqui.</p>
+    <section class="linha-do-tempo-carrossel">
+      <h2>Linha do Tempo</h2>
+    
+      <div class="carrossel-eventos">
+        <button class="seta seta-esquerda">&#8592;</button>
+    
+        <div class="slide-evento ativo">
+          <span class="ano">2015</span>
+          <p>Nasce o Sebo Página Virada, com uma pequena estante na feira de domingo.</p>
+        </div>
+        <div class="slide-evento">
+          <span class="ano">2017</span>
+          <p>Inauguração da primeira loja física com mais de 1.000 títulos.</p>
+        </div>
+        <div class="slide-evento">
+          <span class="ano">2020</span>
+          <p>Expansão para o mundo digital com a criação do nosso site.</p>
+        </div>
+        <div class="slide-evento">
+          <span class="ano">2024</span>
+          <p>Lançamento da caixa surpresa literária e clube de leitura.</p>
+        </div>
+    
+        <button class="seta seta-direita">&#8594;</button>
+      </div>
+    </section>
+    
+    <!--Seção Missão e valores-->
+    <!--<h2>Missão e Valores</h2>-->
+    <div class="botao-container">
+      <button onclick="mostrarTexto('missao')">Missão</button>
+      <button onclick="mostrarTexto('valores')">Valores</button>
+    </div>
+    
+    <div id="conteudo-missao-valores">
+      <p id="texto-missao">
+        Nossa missão é promover o acesso à leitura por meio da reutilização de livros, incentivando a sustentabilidade cultural e ambiental.
+      </p>
+      <p id="texto-valores" style="display: none;">
+        Nossos valores são: amor pelos livros, incentivo à leitura, acessibilidade, respeito ao cliente e cuidado com o meio ambiente.
+      </p>
+    </div>
 
     <h2>Serviços</h2>
     <p>[Roberta] Serviços oferecidos (compra, troca, doações).</p>
   </main>
+  <!-- Interação da linha do tempo - Carrossel -->
+  <script>
+    const slides = document.querySelectorAll('.slide-evento');
+    const btnEsq = document.querySelector('.seta-esquerda');
+    const btnDir = document.querySelector('.seta-direita');
+    let indiceAtual = 0;
+  
+    function mostrarSlide(indice) {
+      slides.forEach(slide => slide.classList.remove('ativo'));
+      slides[indice].classList.add('ativo');
+    }
+  
+    btnEsq.addEventListener('click', () => {
+      indiceAtual = (indiceAtual - 1 + slides.length) % slides.length;
+      mostrarSlide(indiceAtual);
+    });
+  
+    btnDir.addEventListener('click', () => {
+      indiceAtual = (indiceAtual + 1) % slides.length;
+      mostrarSlide(indiceAtual);
+    });
+  </script>
+  
 </body>
+<!-- Interação da seção missão e valores -->
+<script>
+  function mostrarTexto(secao) {
+    const missao = document.getElementById("texto-missao");
+    const valores = document.getElementById("texto-valores");
+
+    if (secao === "missao") {
+      missao.style.display = "block";
+      valores.style.display = "none";
+    } else {
+      missao.style.display = "none";
+      valores.style.display = "block";
+    }
+  }
+</script>
 </html>
