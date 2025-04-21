@@ -75,5 +75,93 @@ body {
     background-color: #8b5e3c;
   }
 
+  .introducao, .destaques {
+    margin-bottom: 30px;
+  }
+  
+  .destaques ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .destaques li {
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+  
+  .carrossel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.ativo {
+    display: block;
+  }
+  
+  /* Área do fundo do carrossel */
+.carrossel-bg {
+    background: url('imagens/fundo-carrossel.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 40px 0;
+    width: 100%;
+  }
+  
+  /* Container principal do carrossel */
+  .carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Imagem */
+  .carrossel-wrapper {
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.ativo {
+    display: block;
+  }
+  
+  /* Setas fora da imagem */
+  .seta {
+    background-color: #fff;
+    border: none;
+    font-size: 28px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .seta:hover {
+    background-color: #ddd;
+  }
+  
   
   

@@ -16,17 +16,69 @@
   </header>
 
   <main>
-    <h2>Bem-vindo ao nosso Sebo Online!</h2>
-    <p>[Ediana] Aqui virá uma introdução ao sebo.</p>
+    <section class="carrossel-bg">
+      <div class="carrossel">
+        <button class="seta esquerda" onclick="mudarSlide(-1)">❮</button>
+    
+        <div class="carrossel-wrapper">
+          <img src="imagens/home_frase.png" class="slide ativo" alt="Frase">
+          <img src="imagens/caixa_surpresa.png" class="slide" alt="Caixa Surpresa">
+          <img src="imagens/livro_da_semana.jpg" class="slide" alt="Indicação da Semana">
+          <img src="imagens/frete_gratis.png" class="slide" alt="Frete Gratis">
+        </div>
+    
+        <button class="seta direita" onclick="mudarSlide(1)">❯</button>
+      </div>
+    </section>
+    
+    <section class="introducao">
+      <h2>Bem-vindo ao Sebo Página Virada</h2>
+      <p>Nosso sebo é um espaço para amantes de livros, histórias e conhecimento. Aqui, cada página tem uma nova chance de ser virada.</p>
+    </section>
+  
+    <section class="destaques">
+      <h2>Destaques da Semana</h2>
+      <ul>
+        <li><strong>O Pequeno Príncipe</strong> – R$ 10,00</li>
+        <li><strong>Dom Casmurro</strong> – R$ 8,00</li>
+        <li><strong>1984</strong> – R$ 12,00</li>
+      </ul>
+    </section>
 
-    <h3>Destaques da Semana:</h3>
+    <h3>Seção de “Notícias” ou “Novidades Recentes”</h3>
     <ul>
-      <li>[Roberta] Lista de livros recém-chegados</li>
+      <li>[Roberta] Exemplo Lista de livros recém-chegados</li>
     </ul>
 
     <div>
       [Delis] Galeria de imagens aqui
     </div>
   </main>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+  
+    function mostrarSlide(index) {
+      slides.forEach(slide => slide.classList.remove("ativo"));
+      slides[index].classList.add("ativo");
+    }
+  
+    function mudarSlide(direcao) {
+      slideIndex += direcao;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      mostrarSlide(slideIndex);
+    }
+  
+    function autoTroca() {
+      mudarSlide(1);
+    }
+  
+    mostrarSlide(slideIndex);
+    setInterval(autoTroca, 5000); // Troca automática a cada 5s
+  </script>
+  
+  
 </body>
 </html>
