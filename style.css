@@ -206,7 +206,6 @@ body {
     background-color: #8b5e3c;
   }
   
-  /* ==== Estilo da linha do tempo na página sobre ==== */
   .linha-do-tempo-carrossel {
     text-align: center;
     padding: 40px 20px;
@@ -224,6 +223,76 @@ body {
     justify-content: center;
     gap: 20px;
     max-width: 700px;
+}
+  .botao-container {
+    margin: 10px 0;
+  }
+  
+  .botao-container button {
+    background-color: #a67c52;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-container button:hover {
+    background-color: #8b5e3c;
+  }
+
+  .introducao, .destaques {
+    margin-bottom: 30px;
+  }
+  
+  .destaques ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .destaques li {
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+  
+  .carrossel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.ativo {
+    display: block;
+  }
+  
+  /* Área do fundo do carrossel */
+.carrossel-bg {
+    background: url('imagens/fundo-carrossel.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 40px 0;
+    width: 100%;
+  }
+  
+  /* Container principal do carrossel */
+  .carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
   }
@@ -250,6 +319,35 @@ body {
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
+}
+  /* Imagem */
+  .carrossel-wrapper {
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.ativo {
+    display: block;
+  }
+  
+  /* Setas fora da imagem */
+  .seta {
+    background-color: #fff;
+    border: none;
+    font-size: 28px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 15px;
     transition: background-color 0.3s;
   }
   
@@ -263,5 +361,20 @@ body {
     font-size: 20px;
     display: block;
     margin-bottom: 10px;
+    background-color: #ddd;
   }
   
+  .contato ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contato li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .contato i {
+    margin-right: 10px;
+    color: #7c5e3c; /* tom amadeirado para o estilo vintage */
+  }
