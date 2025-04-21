@@ -109,7 +109,7 @@ body {
   
   /* Setas fora da imagem */
   .seta {
-    background-color: #fff;
+    background-color: #0f0f0f;
     border: none;
     font-size: 28px;
     padding: 10px 16px;
@@ -120,7 +120,7 @@ body {
   }
   
   .seta:hover {
-    background-color: #ddd;
+    background-color: #0f0f0f;
   }
   
   .contato ul {
@@ -206,6 +206,24 @@ body {
     background-color: #8b5e3c;
   }
   
+  .linha-do-tempo-carrossel {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3e7d3;
+  }
+  
+  .linha-do-tempo-carrossel h2 {
+    color: #5c432a;
+    margin-bottom: 30px;
+  }
+  
+  .carrossel-eventos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 700px;
+}
   .botao-container {
     margin: 10px 0;
   }
@@ -279,6 +297,29 @@ body {
     position: relative;
   }
   
+  .slide-evento {
+    display: none;
+    max-width: 500px;
+    background-color: #fff8ec;
+    border: 2px solid #a67c52;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .slide-evento.ativo {
+    display: block;
+  }
+  
+  .seta {
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
   /* Imagem */
   .carrossel-wrapper {
     max-width: 600px;
@@ -311,6 +352,15 @@ body {
   }
   
   .seta:hover {
+    background-color: #7c5e3c;
+  }
+  
+  .ano {
+    font-weight: bold;
+    color: #7c5e3c;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
     background-color: #ddd;
   }
   
@@ -328,5 +378,3 @@ body {
     margin-right: 10px;
     color: #7c5e3c; /* tom amadeirado para o estilo vintage */
   }
-  
-  
