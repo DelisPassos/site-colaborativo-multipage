@@ -163,5 +163,19 @@ body {
     background-color: #ddd;
   }
   
+  .contato ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contato li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .contato i {
+    margin-right: 10px;
+    color: #7c5e3c; /* tom amadeirado para o estilo vintage */
+  }
   
   
