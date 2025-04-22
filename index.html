@@ -16,88 +16,30 @@
   </header>
 
   <main>
-    <section class="carrossel-bg">
-      <div class="carrossel">
-        <button class="seta esquerda" onclick="mudarSlide(-1)">❮</button>
-    
-        <div class="carrossel-wrapper">
-          <img src="imagens/home_frase.png" class="slide ativo" alt="Frase">
-          <img src="imagens/caixa_surpresa.png" class="slide" alt="Caixa Surpresa">
-          <img src="imagens/livro_da_semana.jpg" class="slide" alt="Indicação da Semana">
-          <img src="imagens/frete_gratis.png" class="slide" alt="Frete Gratis">
-        </div>
-    
-        <button class="seta direita" onclick="mudarSlide(1)">❯</button>
-      </div>
-    </section>
-    
-    <section class="introducao">
-      <h1>Bem-vindo ao Sebo Página Virada</h1>
-      <p>Nosso sebo é um espaço para amantes de livros, histórias e conhecimento. Aqui, cada página tem uma nova chance de ser virada.</p>
-    </section>
-  
-    <section class="destaques">
-      <h2>Destaques da Semana</h2>
-      <ul>
-        <li><strong>O Pequeno Príncipe</strong> – R$ 10,00</li>
-        <li><strong>Dom Casmurro</strong> – R$ 8,00</li>
-        <li><strong>1984</strong> – R$ 12,00</li>
-      </ul>
-    </section>
+    <h2>Bem-vindo ao nosso Sebo Online!</h2>
+    <p>[Ediana] Aqui virá uma introdução ao sebo.</p>
 
-    <h2>Novidades Recentes</h2>
-    <p>Todo dia é dia de descoberta por aqui! Confira os títulos que acabaram de chegar nas nossas estantes —
-      quem sabe seu próximo favorito não está entre eles?</p>
-
-    <strong> Chegaram por aqui: </strong>
+    <h3>Destaques da Semana:</h3>
     <ul>
-      <li>"Grande Sertão: Veredas" – João Guimarães Rosa (edição especial de colecionador);</li>
-      <li>"O Conto da Aia" – Margaret Atwood (quase novo!);</li>
-      <li>"1984" – George Orwell (edição bilíngue);</li>
-      <li>Coleção Vagalume – clássicos da infância e juventude, em ótimo estado;</li>
-      <li>HQs da Marvel e DC – raridades pra quem ama quadrinhos!</li>
-    </ul>
-
-    <strong>Reabastecemos:</strong>
-    <ul>
-      <li>Livros de autoajuda e desenvolvimento pessoal;</li>
-      <li>Romances históricos e best-sellers;</li>
-      <li>Obras de filosofia e sociologia;</li>
-      <li>Obras de filosofia e sociologia;</li>
-      <li>Apostilas e livros técnicos.</li>
+      <li>[Roberta] Lista de livros recém-chegados</li>
     </ul>
 
     <strong> Obra da Semana: “Ensaio Sobre a Cegueira” </strong>– José Saramago, com dedicatória linda do antigo dono.
 
-    <div>
-      [Delis] Galeria de imagens aqui
-    </div>
+    <section class="galeria">
+      <h2>Destaques do Sebo - Livros Mais Vendidos</h2>
+      <div class="grid-galeria">
+        <img src="imagens/bos-os-rokesbys.jpg" alt="Capa do livro Os rokesbys">
+        <img src="imagens/rivais-a-bordo.jpg" alt="Capa do livro Rivais a Bordo">
+        <img src="imagens/sem-coração.jpg" alt="Capa do livro Sem Coração">
+        <img src="imagens/predestinadas.jpg" alt="Capa do livro Obsediana">
+        <img src="imagens/encontros-intimos.jpg" alt="Capa do livro Encontro intimos">
+        <img src="imagens/obsediana.jpg" alt="Capa do livro Predestinadas">
+        <img src="imagens/mina-melhor-parte.jpg" alt="Capa do livro minha melhor parte">
+        <img src="imagens/os-brigertons.jpg" alt="Capa do livro os brigertons">
+      </div>
+    </section>
+      
   </main>
-
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slide");
-  
-    function mostrarSlide(index) {
-      slides.forEach(slide => slide.classList.remove("ativo"));
-      slides[index].classList.add("ativo");
-    }
-  
-    function mudarSlide(direcao) {
-      slideIndex += direcao;
-      if (slideIndex < 0) slideIndex = slides.length - 1;
-      if (slideIndex >= slides.length) slideIndex = 0;
-      mostrarSlide(slideIndex);
-    }
-  
-    function autoTroca() {
-      mudarSlide(1);
-    }
-  
-    mostrarSlide(slideIndex);
-    setInterval(autoTroca, 5000); // Troca automática a cada 5s
-  </script>
-  
-  
 </body>
 </html>
