@@ -34,7 +34,7 @@ body {
   ul {
     list-style-type: square;
   }
-
+  
   .introducao, .destaques {
     margin-bottom: 30px;
   }
@@ -52,43 +52,23 @@ body {
   .carrossel {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  .slide {
-    display: none;
-    width: 100%;
-    height: auto;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .slide.ativo {
-    display: block;
-  }
-  
-  /* Área do fundo do carrossel */
-.carrossel-bg {
+  .carrossel-bg {
     background: url('imagens/fundo-carrossel.jpg') no-repeat center center;
     background-size: cover;
     padding: 40px 0;
     width: 100%;
   }
   
-  /* Container principal do carrossel */
-  .carrossel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  /* Imagem */
   .carrossel-wrapper {
     max-width: 600px;
     overflow: hidden;
@@ -107,9 +87,8 @@ body {
     display: block;
   }
   
-  /* Setas fora da imagem */
   .seta {
-    background-color: #0f0f0f;
+    background-color: #fff;
     border: none;
     font-size: 28px;
     padding: 10px 16px;
@@ -120,7 +99,7 @@ body {
   }
   
   .seta:hover {
-    background-color: #0f0f0f;
+    background-color: #7c5e3c;
   }
   
   .contato ul {
@@ -135,8 +114,9 @@ body {
   
   .contato i {
     margin-right: 10px;
-    color: #7c5e3c; /* tom amadeirado para o estilo vintage */
+    color: #7c5e3c;
   }
+  
   form {
     width: 100%;
     max-width: 600px;
@@ -178,14 +158,13 @@ body {
     background-color: #5e4229;
   }
   
-  /* acessibilidade: escondendo o label visualmente mas mantendo para leitores de tela */
   .visually-hidden {
     position: absolute;
     left: -9999px;
   }
   
   .botao-container {
-    margin: 20px 0;
+    margin: 10px 0;
     text-align: center;
   }
   
@@ -193,12 +172,11 @@ body {
     background-color: #a67c52;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 8px 16px;
+    margin-right: 10px;
     cursor: pointer;
     font-family: 'Georgia', serif;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
   }
   
@@ -206,7 +184,6 @@ body {
     background-color: #8b5e3c;
   }
   
-  /* ==== Estilo da linha do tempo na página sobre ==== */
   .linha-do-tempo-carrossel {
     text-align: center;
     padding: 40px 20px;
@@ -224,8 +201,6 @@ body {
     justify-content: center;
     gap: 20px;
     max-width: 700px;
-    margin: 0 auto;
-    position: relative;
   }
   
   .slide-evento {
@@ -242,26 +217,50 @@ body {
     display: block;
   }
   
-  .seta {
-    background-color: #a67c52;
-    color: white;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .seta:hover {
-    background-color: #7c5e3c;
-  }
-  
   .ano {
     font-weight: bold;
     color: #7c5e3c;
     font-size: 20px;
     display: block;
     margin-bottom: 10px;
+    background-color: #ddd;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #5c432a;
+  }
+  
+  .galeria {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fdf3e7;
+  }
+  
+  .galeria h2 {
+    color: #5c432a;
+    margin-bottom: 30px;
+  }
+  
+  .grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .grid-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .grid-galeria img:hover {
+    transform: scale(1.05);
   }
   
